@@ -17,7 +17,7 @@ class LoanPage extends StatefulWidget {
 
 class LoanPageState extends State<LoanPage> {
   /// Key that enables seeing the form's validation state.
-  final GlobalKey<LoanPageFormFieldsState> _loanPageFormFieldsKey = GlobalKey();
+  final GlobalKey<LoanPageFormState> _loanPageFormFieldsKey = GlobalKey();
 
   /// Variable where the response is stored when a client applies for a loan.
   static Future<Map<String, dynamic>>? response;
@@ -78,7 +78,7 @@ class LoanPageState extends State<LoanPage> {
           ),
           const SizedBox(height: 32.0),
           // Build all form fields and sliders
-          LoanPageFormFields(
+          LoanPageForm(
             key: _loanPageFormFieldsKey,
             onValidationStateChange: (bool isValid) {
               setState(() {

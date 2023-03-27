@@ -8,22 +8,22 @@ import 'package:http/http.dart' as http;
 import '../../utils/constants.dart';
 import '../../utils/palette.dart';
 
-/// LoanPageFormFields class is a group of widgets on the LoanPage.
+/// LoanPageForm class is a group of widgets on the LoanPage.
 ///
 /// This class builds all the visible text fields and sliders, while constantly
 /// tracking and validating their values.
-class LoanPageFormFields extends StatefulWidget {
+class LoanPageForm extends StatefulWidget {
   /// Callback to parent – notifies parent whether the fields are validated or not
   final ValidationCallBack onValidationStateChange;
 
-  const LoanPageFormFields({Key? key, required this.onValidationStateChange})
+  const LoanPageForm({Key? key, required this.onValidationStateChange})
       : super(key: key);
 
   @override
-  State<LoanPageFormFields> createState() => LoanPageFormFieldsState();
+  State<LoanPageForm> createState() => LoanPageFormState();
 }
 
-class LoanPageFormFieldsState extends State<LoanPageFormFields> {
+class LoanPageFormState extends State<LoanPageForm> {
   /// Form key for all text fields.
   final _formKey = GlobalKey<FormState>();
 
