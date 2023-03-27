@@ -145,22 +145,27 @@ class LoanPageFormState extends State<LoanPageForm> {
         children: [
           Flexible(
             flex: 3,
-            child: Slider(
-              activeColor: Palette.secondaryAccentColor,
-              inactiveColor: Palette.lightGray,
-              value: _currentLoanAmountValue.toDouble(),
-              min: Constants.loanAmountMinValue.toDouble(),
-              max: Constants.loanAmountMaxValue.toDouble(),
-              divisions: 80,
-              label: _currentLoanAmountValue.round().toString(),
-              onChanged: (double value) {
-                _updateValidationState();
-                setState(() {
-                  _currentLoanAmountValue = value.toInt();
-                  _loanAmountSliderController.text =
-                      _currentLoanAmountValue.toString();
-                });
-              },
+            child: SliderTheme(
+              data: SliderThemeData(
+                tickMarkShape: SliderTickMarkShape.noTickMark,
+              ),
+              child: Slider(
+                activeColor: Palette.secondaryAccentColor,
+                inactiveColor: Palette.lightGray,
+                value: _currentLoanAmountValue.toDouble(),
+                min: Constants.loanAmountMinValue.toDouble(),
+                max: Constants.loanAmountMaxValue.toDouble(),
+                divisions: 80,
+                label: _currentLoanAmountValue.round().toString(),
+                onChanged: (double value) {
+                  _updateValidationState();
+                  setState(() {
+                    _currentLoanAmountValue = value.toInt();
+                    _loanAmountSliderController.text =
+                        _currentLoanAmountValue.toString();
+                  });
+                },
+              ),
             ),
           ),
           Flexible(
@@ -237,21 +242,26 @@ class LoanPageFormState extends State<LoanPageForm> {
         children: [
           Flexible(
             flex: 3,
-            child: Slider(
-              activeColor: Palette.secondaryAccentColor,
-              inactiveColor: Palette.lightGray,
-              value: _currentLoanPeriodValue.toDouble(),
-              min: Constants.loanPeriodMinValue.toDouble(),
-              max: Constants.loanPeriodMaxValue.toDouble(),
-              label: _currentLoanPeriodValue.round().toString(),
-              onChanged: (double value) {
-                _updateValidationState();
-                setState(() {
-                  _currentLoanPeriodValue = value.toInt();
-                  _loanPeriodSliderController.text =
-                      _currentLoanPeriodValue.toString();
-                });
-              },
+            child: SliderTheme(
+              data: SliderThemeData(
+                tickMarkShape: SliderTickMarkShape.noTickMark,
+              ),
+              child: Slider(
+                activeColor: Palette.secondaryAccentColor,
+                inactiveColor: Palette.lightGray,
+                value: _currentLoanPeriodValue.toDouble(),
+                min: Constants.loanPeriodMinValue.toDouble(),
+                max: Constants.loanPeriodMaxValue.toDouble(),
+                label: _currentLoanPeriodValue.round().toString(),
+                onChanged: (double value) {
+                  _updateValidationState();
+                  setState(() {
+                    _currentLoanPeriodValue = value.toInt();
+                    _loanPeriodSliderController.text =
+                        _currentLoanPeriodValue.toString();
+                  });
+                },
+              ),
             ),
           ),
           Flexible(
