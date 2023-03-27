@@ -1,4 +1,4 @@
-import 'package:decisionengine_frontend/pages/widgets/loan_page_form_fields.dart';
+import 'package:decisionengine_frontend/pages/widgets/loan_page_form.dart';
 import 'package:decisionengine_frontend/pages/widgets/loan_page_response_builder.dart';
 import 'package:flutter/material.dart';
 
