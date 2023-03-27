@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../application.dart';
+import '../decision_engine_application.dart';
 import '../utils/palette.dart';
 
 /// ThemeSwitcher class is a widget that's always visible on the screen.
@@ -13,10 +13,10 @@ class ThemeSwitcher extends StatefulWidget {
   const ThemeSwitcher({Key? key, required this.isDarkMode}) : super(key: key);
 
   @override
-  State<ThemeSwitcher> createState() => _ThemeSwitcherState();
+  State<ThemeSwitcher> createState() => ThemeSwitcherState();
 }
 
-class _ThemeSwitcherState extends State<ThemeSwitcher> {
+class ThemeSwitcherState extends State<ThemeSwitcher> {
   /// Whether it's currently dark mode or not. Gets value from parent class.
   bool isDarkMode = false;
 

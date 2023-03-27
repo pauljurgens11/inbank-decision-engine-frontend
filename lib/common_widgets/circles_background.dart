@@ -13,7 +13,7 @@ class CirclesBackground extends StatelessWidget {
     return Align(
       alignment: Alignment.bottomRight,
       child: SvgPicture.asset(
-        "transparent_circles.svg",
+        "assets/transparent_circles.svg",
       ),
     );
   }

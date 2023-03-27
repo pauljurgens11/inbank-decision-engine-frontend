@@ -121,7 +121,6 @@ class LoanPageFormState extends State<LoanPageForm> {
               hintText: "00000000000",
               border: const OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(12.0))),
-              // TODO: ADD SUFFIX
             ),
             validator: (code) {
               if (code != null) {
